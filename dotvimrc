@@ -56,7 +56,7 @@ Plug 'morhetz/gruvbox'
 " Vim Dracula Color Theme
 Plug 'dracula/vim',{'as':'dracula'}
 
-" Vim challenger-deep Color Theme
+" Vim Tokyo Night Color Theme
 Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
