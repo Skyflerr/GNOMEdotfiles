@@ -25,6 +25,9 @@ set undodir=~/.vim/undordir
 set undofile 
 set incsearch
 set relativenumber
+set cursorline
+set cursorcolumn
+set termguicolors
 
 " Column set to column 100
 set colorcolumn=100
@@ -50,24 +53,23 @@ Plug 'sheerun/vim-polyglot'
 " Gruvbox color theme
 Plug 'morhetz/gruvbox'
 
-" Vim-monokai-tasty color theme
-Plug 'patstockwell/vim-monokai-tasty'
+" Vim Dracula Color Theme
+Plug 'dracula/vim',{'as':'dracula'}
 
-" Vim Cappuccin color cheme
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }"
-
+" Vim challenger-deep Color Theme
+Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
 " Start nerdtree whit vim 
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 
 " Set the prettier CLI executable path
 let g:prettier#exec_cmd_path = "~/.vim/plugged/vim-prettier/node_modules/prettier"
 " Max line length that prettier will wrap on: a number or 'auto'
 let g:prettier#config#print_width = 100 " default is 'auto'
 
-" Colorscheme (For gruvbox $TERM env var needs to be xterm-256color)
-" autocmd vimenter * ++nested colorscheme gruvbox
-autocmd vimenter * colorscheme catppuccin_macchiato
-" colorscheme vim-monokai-tasty
+" Set tokyonight theme
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1 
+colorscheme tokyonight
